@@ -6,6 +6,7 @@ import json
 from streamlit_lottie import st_lottie
 import matplotlib.pyplot as plt
 import os
+import base64
 
 st.set_page_config(
     page_title="Sentiment Analysis Tool",
@@ -19,6 +20,7 @@ def get(path: str):
 
 
 path = get('./ani.json')
+doc_path = get('./doc.json')
 # Set NLTK data source
 
 
@@ -128,3 +130,68 @@ with st.expander('Visualize your excel '):
 
         st.pyplot(fig)
 st_lottie(path)
+
+# Documentation Page
+
+open_docs = st.button("Open Documentation")
+
+# Check if the button is clicked
+if open_docs:
+    st_lottie(doc_path)
+    st.header("Abstract")
+
+    st.write(
+        "The Sentiment Analysis Tool is a web-based application designed to provide users with a quick and effective way "
+        "to analyze sentiments in both individual text entries and large sets of comments from social media platforms. "
+        "Leveraging Natural Language Processing (NLP) techniques, the tool categorizes text into positive, negative, or "
+        "neutral sentiments, offering valuable insights for businesses, marketers, and individuals seeking real-time sentiment "
+        "feedback."
+    )
+
+    st.header("Key Features")
+
+    st.write("### 1. User-Friendly Interface:")
+    st.write("- The tool boasts an intuitive web interface, making it easy for users to input text for analysis or upload Excel files containing comments.")
+
+    st.write("### 2. Real-Time Sentiment Analysis:")
+    st.write("- For individual text entries, the tool instantly evaluates the sentiment, providing polarity scores and emotional categorizations (Positive, Negative, Neutral).")
+
+    st.write("### 3. Excel File Analysis:")
+    st.write("- Users can upload Excel files containing comments for batch sentiment analysis. The tool calculates sentiment scores and categorizes comments by their sentiment.")
+
+    st.write("### 4. Visual Feedback:")
+    st.write("- The tool offers visual representations of sentiment trends, allowing users to easily grasp the distribution of sentiments in their data.")
+
+    st.write("### 5. Total Sentiment Score:")
+    st.write("- In Excel file analysis, the tool calculates the total sentiment score, providing an overall assessment of the sentiment in the comments.")
+
+    st.write("### 6. Data Privacy Compliance:")
+    st.write("- The tool prioritizes ethical handling of user data and ensures compliance with data privacy regulations.")
+
+    st.header("Technical Details")
+
+    st.write("### Dependencies:")
+    st.write("  - `streamlit`, `pandas`, `textblob`, `matplotlib`")
+
+    st.write("### Underlying Technology:")
+    st.write("  - Natural Language Processing (NLP) techniques are employed for sentiment analysis, utilizing the TextBlob library.")
+
+    st.write("### Visualization:")
+    st.write("  - Visual feedback and sentiment trends are generated using the Matplotlib library, providing users with graphical representations of sentiment data.")
+
+    st.header("Use Cases")
+
+    st.write("- Businesses can use this tool to monitor public sentiment towards their products or services on social media, enabling them to make data-driven decisions for marketing and customer service strategies.")
+
+    st.write("- Marketers can quickly gauge the effectiveness of their campaigns by analyzing customer feedback in real-time.")
+
+    st.write("- Individuals can gain insights into public sentiment on various topics by analyzing social media comments and posts.")
+
+    st.header("Conclusion")
+
+    st.write(
+        "The Sentiment Analysis Tool offers a powerful and user-friendly solution for understanding and categorizing sentiment "
+        "in social media content. With its ability to provide real-time feedback and process large datasets, it serves as a "
+        "valuable resource for businesses and individuals seeking to stay informed about public sentiment in the digital landscape."
+    )
+
