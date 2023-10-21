@@ -101,23 +101,9 @@ with st.expander('Visualize your excel '):
 
 
     # Sentiment Analysis Function
-    def analyze_sentiment(df):
-        # Your sentiment analysis code here
-        # For example, let's assume you have a 'comments' column
-        df['score'] = df['comments'].apply(score)
-        df['analysis'] = df['score'].apply(analyze)
-        return df
-
-
     if uploaded_file is not None:
         # Read the uploaded file
         df = pd.read_excel(uploaded_file)
-
-        # Perform Sentiment Analysis
-        df = analyze_sentiment(df)
-
-        # Display Sentiment Analysis Results
-        st.write(df)
 
         # Visualize sentiment analysis results
         sentiment_counts = df['analysis'].value_counts()
@@ -194,4 +180,3 @@ if open_docs:
         "in social media content. With its ability to provide real-time feedback and process large datasets, it serves as a "
         "valuable resource for businesses and individuals seeking to stay informed about public sentiment in the digital landscape."
     )
-
