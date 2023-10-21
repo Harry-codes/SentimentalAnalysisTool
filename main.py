@@ -9,7 +9,7 @@ import os
 import base64
 
 st.set_page_config(
-    page_title="Sentiment Analysis Tool",
+    page_title="Sentilyzer",
     page_icon="🧊"
 )
 
