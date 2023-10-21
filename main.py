@@ -26,7 +26,7 @@ doc_path = get('./doc.json')
 
 os.environ['NLTK_DATA'] = 'https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/'
 
-st.title('Sentiment Analysis Tool')
+st.title('Sentilyzer')
 
 # Analyze Text Section
 with st.expander('Check whether Your post is positive or negative '):
@@ -127,7 +127,7 @@ if open_docs:
     st.header("Abstract")
 
     st.write(
-        "The Sentiment Analysis Tool is a web-based application designed to provide users with a quick and effective way "
+        "The Sentilyzer is a web-based application designed to provide users with a quick and effective way "
         "to analyze sentiments in both individual text entries and large sets of comments from social media platforms. "
         "Leveraging Natural Language Processing (NLP) techniques, the tool categorizes text into positive, negative, or "
         "neutral sentiments, offering valuable insights for businesses, marketers, and individuals seeking real-time sentiment "
@@ -176,7 +176,7 @@ if open_docs:
     st.header("Conclusion")
 
     st.write(
-        "The Sentiment Analysis Tool offers a powerful and user-friendly solution for understanding and categorizing sentiment "
+        "The Sentilyzer offers a powerful and user-friendly solution for understanding and categorizing sentiment "
         "in social media content. With its ability to provide real-time feedback and process large datasets, it serves as a "
         "valuable resource for businesses and individuals seeking to stay informed about public sentiment in the digital landscape."
     )
