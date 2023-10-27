@@ -21,10 +21,6 @@ def get(path: str):
 
 path = get('./ani.json')
 doc_path = get('./doc.json')
-# Set NLTK data source
-
-
-os.environ['NLTK_DATA'] = 'https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/'
 
 st.title('Sentilyzer')
 
